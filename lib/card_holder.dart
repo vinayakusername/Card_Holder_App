@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 class Card_Holder extends StatelessWidget{
 
 
-Container MyFruits(String imageValue,String friutName,String subHeading){
+Container MyFruits(String imageValue,String friutName){
   
   return Container(
-                    width: 150.0,
+                    width: 96.0,
                     child: Card(
                       child: Wrap(
                         children: <Widget>[
-                          Image.asset(imageValue,width: 80,height: 80,),
+                          Image.asset(imageValue,width: 40,height: 40,),
                           ListTile(
                             title: Text(friutName),
-                            subtitle: Text(subHeading),
+                           // subtitle: Text(subHeading),
                           )
                         ],
                       ),
@@ -34,18 +34,20 @@ Container MyFruits(String imageValue,String friutName,String subHeading){
          
             body: Container(
               margin: EdgeInsets.symmetric(vertical: 20.0),
-              height: 150,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
+              height: 90,
+              child: Wrap(
+                runSpacing: 2.0,
+                spacing: 4.0,
+                direction: Axis.horizontal,
                 children: <Widget>[
-                 MyFruits('assets/fruits/image1.jpg', "Mango","SubHeading1"),
-                 MyFruits('assets/fruits/image2.jpg', "Apple","SubHeading2"),
-                 MyFruits('assets/fruits/image3.jpg', "Banana","SubHeading3"),
-                 MyFruits('assets/fruits/image4.jpg', "Strawberry","SubHeading4"),
-                 MyFruits('assets/fruits/image5.jpg', "Orange","SubHeading5"),
-                 MyFruits('assets/fruits/image6.jpg', "Watermelon","SubHeading6"),
+                 MyFruits('assets/fruits/image1.jpg', "Mango"),
+                 MyFruits('assets/fruits/image2.jpg', "Apple"),
+                 MyFruits('assets/fruits/image3.jpg', "Banana"),
+                 MyFruits('assets/fruits/image4.jpg', "Strawberry"),
+                 MyFruits('assets/fruits/image5.jpg', "Orange"),
+                 MyFruits('assets/fruits/image6.jpg', "Watermelon"),
                 ],
-              )
+              ),
             ),
 
           
